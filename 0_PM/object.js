@@ -10,7 +10,16 @@ const assert = require('assert')
  */
 
 const hasFalsyValue = obj => {
-  return false;
+
+  for (const prop in obj) {
+    if (!obj[prop]) {
+      return true
+    } else if (typeof(obj[prop]) === "object") {
+      return hasFalsyValue(obj[prop])
+    }
+  }
+
+  return false
 };
 
 const falsyObj = {
@@ -34,5 +43,19 @@ const truthyObj = {
   }
 };
 
+const testObj = {
+  bob: {
+    jane: {
+      harold: {
+        one: ""
+      }
+    }
+  }
+}
+
+//console.log("Falsy obj should return true and is " + hasFalsyValue(falsyObj))
+//console.log("Truthy obj should return false and is " + hasFalsyValue(truthyObj))
+
 assert(hasFalsyValue(falsyObj) === true);
 assert(hasFalsyValue(truthyObj) === false);
+assert(hasFalsyValue(testObj) === true)

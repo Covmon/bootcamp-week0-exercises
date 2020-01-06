@@ -6,16 +6,21 @@ const assert = require('assert')
  */
 
 // TODO
-const triple = () => {
-
+const triple = inp => {
+  return inp * 3
 };
 
 // TODO
 Array.prototype.map = function(fun) {
-
+  newArr = []
+  this.forEach(el => {
+    newArr.push(fun(el))
+  })
+  return newArr
 };
 
-const arr = [0, 1, 2, 3, 4];
-const solution = [0, 3, 6, 9, 12];
+const arr = [0, 1, 2, 3, 4, 100];
+const solution = [0, 3, 6, 9, 12, 300];
 
+console.log(arr.map(triple))
 assert(arr.map(triple).every((v, i) => v === solution[i]))

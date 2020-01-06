@@ -5,6 +5,14 @@
  * flips a coin and tells the user whether or not their guess was correct.
  */
 
+ const reportResult = (didWin) => {
+   if (didWin) {
+     console.log("You guessed right!")
+   } else {
+     console.log("You guessed wrong :(")
+   }
+ }
+
 const coinToss = (guess, callback) => {
   const result = Math.round(Math.random());
   const didWin = guess === result;
@@ -17,5 +25,7 @@ const getUser = callback => {
     lastName: "Doe",
     guess: Math.round(Math.random())
   };
-  callback(user);
+  callback(user.guess, reportResult);
 };
+
+getUser(coinToss)

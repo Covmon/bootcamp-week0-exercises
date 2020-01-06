@@ -1,7 +1,9 @@
 /**
  * Part 1:
  *    What will print and why?
+ *    It will print 1 2 undefined
  *    What will change if we delete line 15? Why?
+ *    It wil print 1 2 1 b/c a = 2 was only within y()
  * 
  * Part 2:
  *    Change to ES6 syntax (use arrow functions and change var to let).
@@ -11,17 +13,17 @@
  *        console logs.
  */
 
-function x() {
-  var a;
+const x = () => {
+  a = 2
   console.log(a);
 }
 
-function y() {
-  var a = 2;
+const y = () => {
+  let a = 2;
   console.log(a);
   x();
 }
 
-var a = 1;
+let a = 1;
 console.log(a);
 y();
