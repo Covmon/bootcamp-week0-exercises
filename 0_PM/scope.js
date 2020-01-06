@@ -14,12 +14,11 @@
  */
 
 const x = () => {
-  a = 2
   console.log(a);
 }
 
 const y = () => {
-  let a = 2;
+  a = 2;
   console.log(a);
   x();
 }
