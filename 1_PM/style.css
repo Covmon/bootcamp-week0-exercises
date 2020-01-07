@@ -1,0 +1,62 @@
+body {
+  padding: none;
+  margin: none;
+  font-family: monospace;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(221, 221, 221);
+}
+
+#title {
+  font-family: monospace;
+  color: crimson;
+}
+
+a {
+  font-family: monospace;
+  color: black;
+}
+
+a:hover {
+  color: gray;
+}
+
+a.selected {
+  color: crimson;
+}
+
+#main {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  background-color: crimson;
+  color: white;
+  padding: 5px;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+#photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+img {
+  height: 200px;
+  width: auto;
+  padding: 20px;
+}
