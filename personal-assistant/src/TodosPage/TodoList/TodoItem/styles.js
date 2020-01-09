@@ -8,6 +8,7 @@ export const Container = styled.div`
 `
 export const TodoItemLabel = styled.p`
   font-family: ${props => props.theme.fonts.paragraph.family};
+  width: 400px;
 `
 
 export const TodoColorLabel = styled.span`
@@ -22,7 +23,7 @@ export const ManageTodoButton = styled.button`
   background-color: ${props => props.color};
   border: none;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   transition: all 0.2s ease-out;
   cursor: pointer;
   opacity: 0.5;

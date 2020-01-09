@@ -35,11 +35,17 @@ export const AddTaskButton = styled.button`
   transition: all 0.2s ease-out;
   cursor: pointer;
   background-color: #4aa84c;
-  color: ${props => props.theme.colors.tags.gray};
+  color: white;
 
   &:hover {
     background-color: ${props => props.theme.colors.tags.green};
     color: white;
     box-shadow: 0 3px 4px 0 gray;
+  }
+
+  &:active {
+    background-color: green;
+    box-shadow: none;
+    color: ${props => props.theme.colors.tags.gray};
   }
 `

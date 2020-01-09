@@ -12,7 +12,6 @@ const TodoItem = ({
       color="pink"
       onClick={() => {
         const newTodosList = todosList.filter(todo => todo.id !== id)
-        console.log(newTodosList)
         setTodosList(newTodosList)
 
         const newFilteredTodosList = filteredTodosList.filter(todo => todo.id !== id)

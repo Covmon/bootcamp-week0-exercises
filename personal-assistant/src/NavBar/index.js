@@ -3,11 +3,11 @@ import { NavBarContainer, NavBarItem } from './styles'
 
 const NavBar = () => (
   <NavBarContainer>
-    <NavBarItem selected>
-      Todos
-    </NavBarItem>
     <NavBarItem>
       Today
+    </NavBarItem>
+    <NavBarItem selected>
+      Todos
     </NavBarItem>
   </NavBarContainer>
 )

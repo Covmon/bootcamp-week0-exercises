@@ -6,8 +6,8 @@ const SearchBar = ({ todosList, setFilteredTodosList }) => (
   <SearchInput
     placeholder="Filter todos by label or color"
     onChange={e => {
-      const searchText = e.target.value
-      const newFilteredTodoList = todosList.filter(todo => todo.label.includes(searchText) || todo.color.includes(searchText))
+      const searchText = e.target.value.toLowerCase()
+      const newFilteredTodoList = todosList.filter(todo => todo.label.toLowerCase().includes(searchText) || todo.color.toLowerCase().includes(searchText))
       setFilteredTodosList(newFilteredTodoList)
     }}
   />

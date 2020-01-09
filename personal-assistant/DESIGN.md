@@ -29,5 +29,8 @@ We need to store an array of todo objects. Each todo object will have an id, a l
 - Add todo input text: within Add-task
 - Color dropdown selection: within Add-task
 
+# Today page:
+- Today page
+  - weather
 
 
